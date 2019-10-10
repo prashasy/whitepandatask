@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href=""> -->
+    <title>Task</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--c3 plugins CSS -->
+    <link href="assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    
+
+
+<style>
+.gg{
+    margin-left:66px;
+    height: 30px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .gg{
+        height: 24px;
+        margin-left:10px;
+}
+
+}
+
+.oh:hover {
+    
+   -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    
+   
+}
+
+a.gggg{
+    color:black;
+}
+
+a.gggg:hover{
+color:#3ebcb3;
+}
+
+
+.success {
+  border:1px solid #3ebcb3;
+  color: #3ebcb3;
+  background-color: white;
+}
+
+.success:hover {
+  background-color: white;
+  color: #3ebcb3;
+}
+
+.success_a {
+  border:1px solid #3ebcb3;
+  color: #3ebcb3;
+  background-color: #f9fbfb;
+}
+
+.success_a:hover {
+  background-color: #f9fbfb;
+  color: #3ebcb3;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:30px;
+  margin-left: 30px;
+
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #3ebcb3;
+}
+
+.gggg:hover .overlay {
+  opacity: 1;
+}
+
+.badge {
+  position: absolute;
+  top: 13px;
+  right: 6px;
+  padding: 4px 2px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+.circlle{
+    background-color: #b3e77f;
+ 
+    /* position: absolute; */
+  
+  padding: 0px 10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+li.rrr:hover a{
+    
+    border-right:3px solid #3ebcb3; 
+}
+.active {
+    
+    border-right:3px solid #3ebcb3; 
+}
+
+
+
+.jkl
+{
+    margin-right: 100px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .jkl{
+        margin-right: 10px;
+
+    }
+}
+
+</style>
+
+
+
+</head>
+
+<body class="skin-default-dark fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">WhitePanda</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                      
+                         <img src="whitepanda.png" alt="homepage" class=" gg"   />
+                         <!-- Light Logo text -->    
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item hidden-sm-up"> <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                       
+                    </ul>
+                    <ul class="navbar-nav my-lg-0 jkl">
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell-o" style="font-size: 24px; color: black;"><span class="badge" style="font-size: 11px;">699</span></i></a>
+                            </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="circlle">AB</div></a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <div class="d-flex no-block nav-text-box align-items-center">
+                <!-- <span><img src="assets/images/logo-icon.png" alt="elegant admin template"></span> -->
+                <!-- <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a> -->
+            </div>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="rrr ">  <a  class="waves-effect waves-dark" aria-expanded="false"><i class="fa fa-delicious" style="font-size: 24px;"></i></a></li>
+                        <li class="rrr"> <a class="waves-effect waves-dark" aria-expanded="false"><i class="fa fa-search"  style="font-size: 24px;"></i></a></li>
+                        <li class="rrr"> <a class="waves-effect waves-dark" aria-expanded="false"><i class="fa fa-home hh"  style="font-size: 24px;"></i></a></li>
+
+
+
+                       
+                        
+                        <!-- <div class="text-center m-t-30">
+                            <a href="https://wrappixel.com/templates/elegant-admin/" class="btn waves-effect waves-light btn-success hidden-md-down"> Upgrade to Pro</a>
+                        </div> -->
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+
+
+
+        
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid" style="width: 90%">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h1  style="color:black; padding-top:40px; font-weight: normal">Content Store</h1>
+                    </div>
+                   
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Yearly Sales -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card oh" style="background-color:#f9fbfb;" >
+                            <div class="card-body">
+                              <div style="color: #3ebcb3; font-size:17px;">Got bulk orders or almost similar orders ? Fill the order brief in an excel sheet</div><br>
+                              <div style="color:#aaa7a7; font-size:13px ;">If you're wondering about an easy way to place orders in large numbers, we provide a way customized just for that.<br> Download our excel sheet and fill the 
+                              order brief in the prescribed format and submit. In case you need any help,<br><u> we are just a click away to assist you in placing orders</u></div>
+                              <br>
+                              <button class="btn success_a" style="padding:5px 30px 5px 30px;">Order via Excel Sheet</button>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                    </div>
+<br><br>
+            
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <a href="#" class="gggg" style="text-decoration: none" >
+                            <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body" style="padding-top: 40px;">
+                                       
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                            <div class="overlay">
+                                                    <!-- <div class="text">Hello World</div> -->
+                                                  </div>
+                                        
+                                        
+                                        </div>
+                                        <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                            
+<h4 style=" padding-top: 8px;">Blog/Article</h4>
+<p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹500</p>
+
+                                        </div>
+                                    </div>
+
+                                    <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                    
+                                    <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                   
+                                </div>
+                               
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4">
+                                <a href="#" class="gggg" style="text-decoration: none" >
+                                <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                    <div class="card-body" style="padding-top: 40px;">
+                                           
+                                        <div class="row">
+                                            <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                <div class="overlay">
+                                                        <!-- <div class="text">Hello World</div> -->
+                                                      </div>
+                                            
+                                            
+                                            </div>
+                                            <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                
+    <h4 style=" padding-top: 8px;">Newsletter/E-mailer</h4>
+    <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹1000</p>
+    
+                                            </div>
+                                        </div>
+    
+                                        <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                        
+                                        <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-lg-4">
+                                    <a href="#" class="gggg" style="text-decoration: none" >
+                                    <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                        <div class="card-body" style="padding-top: 40px;">
+                                               
+                                            <div class="row">
+                                                <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                    <div class="overlay">
+                                                            <!-- <div class="text">Hello World</div> -->
+                                                          </div>
+                                                
+                                                
+                                                </div>
+                                                <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                    
+        <h4 style=" padding-top: 8px;">Whitepaper</h4>
+        <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹2000</p>
+        
+                                                </div>
+                                            </div>
+        
+                                            <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                            
+                                            <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </a>
+                                </div>
+
+                       
+
+                        
+                        
+                        </div>
+
+                        <br><br>
+            
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <a href="#" class="gggg" style="text-decoration: none" >
+                            <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body" style="padding-top: 40px;">
+                                       
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                            <div class="overlay">
+                                                    <!-- <div class="text">Hello World</div> -->
+                                                  </div>
+                                        
+                                        
+                                        </div>
+                                        <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                            
+<h4 style=" padding-top: 8px;">e-book</h4>
+<p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹1000</p>
+
+                                        </div>
+                                    </div>
+
+                                    <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                    
+                                    <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                   
+                                </div>
+                               
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4">
+                                <a href="#" class="gggg" style="text-decoration: none" >
+                                <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                    <div class="card-body" style="padding-top: 40px;">
+                                           
+                                        <div class="row">
+                                            <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                <div class="overlay">
+                                                        <!-- <div class="text">Hello World</div> -->
+                                                      </div>
+                                            
+                                            
+                                            </div>
+                                            <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                
+    <h4 style=" padding-top: 8px;">Report/Guide</h4>
+    <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹1000</p>
+    
+                                            </div>
+                                        </div>
+    
+                                        <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                        
+                                        <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-lg-4">
+                                    <a href="#" class="gggg" style="text-decoration: none" >
+                                    <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                        <div class="card-body" style="padding-top: 40px;">
+                                               
+                                            <div class="row">
+                                                <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                    <div class="overlay">
+                                                            <!-- <div class="text">Hello World</div> -->
+                                                          </div>
+                                                
+                                                
+                                                </div>
+                                                <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                    
+        <h4 style=" padding-top: 8px;">Product Description</h4>
+        <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹500</p>
+        
+                                                </div>
+                                            </div>
+        
+                                            <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                            
+                                            <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </a>
+                                </div>
+
+                       
+
+                        
+                        
+                        </div>
+
+                        <br><br>
+            
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <a href="#" class="gggg" style="text-decoration: none" >
+                            <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body" style="padding-top: 40px;">
+                                       
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                            <div class="overlay">
+                                                    <!-- <div class="text">Hello World</div> -->
+                                                  </div>
+                                        
+                                        
+                                        </div>
+                                        <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                            
+<h4 style=" padding-top: 8px;">Website Content</h4>
+<p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹1000</p>
+
+                                        </div>
+                                    </div>
+
+                                    <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                    
+                                    <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                   
+                                </div>
+                               
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4">
+                                <a href="#" class="gggg" style="text-decoration: none" >
+                                <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                    <div class="card-body" style="padding-top: 40px;">
+                                           
+                                        <div class="row">
+                                            <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                <div class="overlay">
+                                                        <!-- <div class="text">Hello World</div> -->
+                                                      </div>
+                                            
+                                            
+                                            </div>
+                                            <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                
+    <h4 style=" padding-top: 8px;">Video Script</h4>
+    <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹1000</p>
+    
+                                            </div>
+                                        </div>
+    
+                                        <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                        
+                                        <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-lg-4">
+                                    <a href="#" class="gggg" style="text-decoration: none" >
+                                    <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                        <div class="card-body" style="padding-top: 40px;">
+                                               
+                                            <div class="row">
+                                                <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                    <div class="overlay">
+                                                            <!-- <div class="text">Hello World</div> -->
+                                                          </div>
+                                                
+                                                
+                                                </div>
+                                                <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                    
+        <h4 style=" padding-top: 0px;">Company Profile/Brochure</h4>
+        <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹2000</p>
+        
+                                                </div>
+                                            </div>
+        
+                                            <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                            
+                                            <button class="btn success" style="padding:5px 30px 5px 30px; margin-bottom:-30px; margin-top:-30px;">Order</button></p>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </a>
+                                </div>
+
+
+                       
+
+                        
+                        
+                        </div><br><br>
+                        <div class="row">
+                        <div class="col-lg-4">
+                                <a href="#" class="gggg" style="text-decoration: none" >
+                                <div class="card oh" style="  -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.02);
+                                box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.02);">
+                                    <div class="card-body" style="padding-top: 40px;">
+                                           
+                                        <div class="row">
+                                            <div class="col-md-4 col-4 jk" style="padding-left:30px;"><img src="sym.png">
+                                                <div class="overlay">
+                                                        <!-- <div class="text">Hello World</div> -->
+                                                      </div>
+                                            
+                                            
+                                            </div>
+                                            <div class="col-md-8 col-8" style="padding-left:6px; ">
+                                                
+    <h4 style=" padding-top: 8px;">Press Release</h4>
+    <p style="color: rgb(63, 63, 63); font-size:15px ; padding-bottom: 10px; ">from ₹2000</p>
+    
+                                            </div>
+                                        </div>
+    
+                                        <p style="padding:0 25px 0 25px; color:#aaa7a7; font-size:13px ;">Typically 400-450 words, an e-book is perfectfor your target audience ranging from prospective customers to users<br><br>
+                                        
+                                        <button class="btn success" style="padding:5px 30px 5px 30px;">Order</button></p>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-4"></div>
+
+
+
+</div>
+                
+<br><br>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer" >
+            <div class="Container">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter" style="color:#a6a6a6; font-size:34px;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin" style="color:#a6a6a6; font-size:34px;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-instagram" style="color:#a6a6a6; font-size:34px;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-facebook" style="color:#a6a6a6; font-size:34px;"></i></a>
+            <br><br>
+           Copyright @ 2019 White Panda Media Pvt. Ltd.<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved<br>
+            </div>
+        </footer>
+        <div class="footer_ee">
+                <u><a href="#" style="text-decoration: none; color:#a6a6a6;">Privacy Policy</a></u> &nbsp; | &nbsp; <u><a href="#" style="text-decoration: none; color:#a6a6a6;">Terms of service</a></u> &nbsp; | 
+                &nbsp; <u><a href="#" style="text-decoration: none; color:#a6a6a6;">Service agreement</a></u>&nbsp;  | &nbsp; <u><a href="#" style="text-decoration: none; color:#a6a6a6;">Contact us<a href="#" style="text-decoration: none; color:#a6a6a6;"></a></u><br><br><Br></div>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="assets/node_modules/d3/d3.min.js"></script>
+    <script src="assets/node_modules/c3-master/c3.min.js"></script>
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+</body>
+
+</html>
